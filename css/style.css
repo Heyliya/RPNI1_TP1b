@@ -3,6 +3,8 @@
  * @author COLLECTIF - @TIMCSF
  *
  * TABLE DES MATIERES
+ * Variables
+ * minxin
  * Normalize
  * Utilitaires
  * Charte typographique
@@ -13,6 +15,11 @@
  *** Architecture des CSS (liste de définitions)
  *** Pied de page
  */
+/* Variables
+   ========================================================================== */
+/* mixins
+   ========================================================================== */
+/* Groupe de règle à réutiliser */
 /* Normalize
    ========================================================================== */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -327,25 +334,8 @@ template {
 
 /* Utilitaires
    ========================================================================== */
-/* Variables et utilitaires
+/* Utilitaires
    ========================================================================== */
-/****** Variables (peuvent être utilisées dans tous les fichiers) *******/
-:root {
-  --couleur-texte: #022b50;
-  --couleur-titres-h1-h3: darkmagenta;
-  --couleur-dominante: darkmagenta;
-  --couleur-secondaire: #418cff;
-  --bg-couleur-contraste:#efefef;
-  --box-shadow:5px 5px 5px;
-}
-
-/*** Clearfix ***/
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 /*** Harmoniser le modèle de boîte avec Box-Sizing ***/
 html {
   box-sizing: border-box;

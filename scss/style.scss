@@ -4,6 +4,8 @@
  * @author COLLECTIF - @TIMCSF
  *
  * TABLE DES MATIERES
+ * Variables
+ * minxin
  * Normalize
  * Utilitaires
  * Charte typographique
@@ -14,6 +16,14 @@
  *** Architecture des CSS (liste de définitions)
  *** Pied de page
  */
+
+/* Variables
+   ========================================================================== */
+@import "_variables";
+
+/* mixins
+   ========================================================================== */
+@import "mixins";
 
 /* Normalize
    ========================================================================== */

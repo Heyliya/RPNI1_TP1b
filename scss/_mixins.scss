@@ -1,0 +1,9 @@
+/* Groupe de règle à réutiliser */
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
