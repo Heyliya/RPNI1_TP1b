@@ -38,10 +38,10 @@ body {
     font-size: 1.6rem;
     /* facteur multiplicateur de la taille de la police 1.375x16 = 22 */
     line-height: 1.5;
-}
-@media (min-width: 1125px) {
-    body {
+
+    @media (min-width: 1125px) {
         font-size: 2rem;
+
     }
 }
 
@@ -50,11 +50,28 @@ h2,
     font-size: 2rem;
     line-height: 1.5;
     font-weight: bold;
-}
-@media (min-width: 1125px) {
-    h2,
-    .h2 {
-        font-size: 2rem;
+    @media (min-width: 1125px) {
+        font-size: 3rem;
         line-height: 1.4;
+    }
+}
+
+.menu__lien {
+    font-size: 2rem;
+    @media (min-width:1025px) and (max-width:1275px) {
+        font-size: 1.6rem;
+    }
+}
+
+.menu__try .menu__lien {
+    @media (min-width:1025px) and (max-width:1275px) {
+        font-size: 1.4rem;
+    }
+}
+.menu__login .menu__lien,
+.menu-secondaire__lien {
+    font-size: 1.4rem;
+    @media (min-width:1275px) {
+        font-size: 1.6rem;
     }
 }
