@@ -12,6 +12,12 @@
  * Grille
  * Général
  *** Mise en page Header
+ **** Menu
+ **** Sous-menu
+ *** Main
+ **** Bandeau
+ **** Section Texte
+ **** Section Image
  *** 
  */
 /* Variables
@@ -331,6 +337,14 @@ template {
   display: none;
 }
 
+ul {
+  margin-block-end: 0;
+  margin-block-start: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
+}
+
 /* Utilitaires
    ========================================================================== */
 /* Utilitaires
@@ -442,20 +456,20 @@ body {
 
 h2,
 .h2 {
-  font-size: 2rem;
-  line-height: 1.5;
-  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 1.8;
+  font-weight: 500;
 }
 @media (min-width: 1125px) {
   h2,
   .h2 {
-    font-size: 3rem;
-    line-height: 1.4;
+    font-size: 2.6rem;
+    line-height: 1.6;
   }
 }
 
 .menu__lien {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 @media (min-width: 1025px) and (max-width: 1275px) {
   .menu__lien {
@@ -503,7 +517,7 @@ h2,
   min-width: 40px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 1025px) {
   .nav__control {
     display: none;
   }
@@ -625,10 +639,22 @@ header {
   padding-top: 20px;
 }
 
-main {
-  padding-left: 8.3333vw;
-  padding-right: 8.3333vw;
-  padding-bottom: 8.3333vw;
+.bandeau {
+  margin: 0 8.33333vw;
+}
+
+.section_texte {
+  width: 100%;
+  margin: 0 auto;
+}
+@media (min-width: 770px) {
+  .section_texte {
+    width: 66%;
+  }
+}
+
+.section_image {
+  width: 100%;
 }
 
 footer {
@@ -649,6 +675,18 @@ footer {
 
 /* Mise en page Header
    ========================================================================== */
+.entete {
+  display: flex;
+  flex-direction: column;
+}
+.entete hr {
+  background-color: #F3F3F3;
+  border: none;
+  width: 100%;
+  height: 2px;
+  margin: 0;
+}
+
 .entete__nav {
   padding: 0 20px 0 20px;
   display: flex;
@@ -658,7 +696,7 @@ footer {
 }
 @media (min-width: 1275px) {
   .entete__nav {
-    padding: 0 40px 0 40px;
+    padding: 0 40px 10px 40px;
   }
 }
 
@@ -667,12 +705,124 @@ footer {
   width: 100%;
 }
 .nav .menu {
-  display: flex;
-  flex-direction: row;
+  display: none;
+}
+@media (min-width: 1025px) {
+  .nav .menu {
+    display: flex;
+    display: flex;
+    flex-direction: row;
+  }
 }
 .nav .menu .menu__item {
-  padding: 0 10px;
+  justify-content: center;
+  padding: 0 1rem;
+  margin: 0;
+}
+@media (min-width: 1275px) {
+  .nav .menu .menu__item {
+    margin: 0.5rem;
+  }
+}
+.nav .menu .menu__item .menu__lien {
+  color: black;
+  font-weight: 500;
 }
 .nav .menu .menu__try {
   margin-left: auto;
+}
+.nav .menu .menu__try .menu__lien {
+  color: #0000ff;
+}
+.nav .menu .menu__item--active .menu__lien {
+  color: #ff764d;
+}
+
+.entete__logo {
+  padding-right: 20px;
+  font-size: 0;
+}
+
+/* Menu Secondaire */
+.navSecondaire {
+  padding: 20px;
+}
+@media (min-width: 1275px) {
+  .navSecondaire {
+    padding: 20px 40px 20px 40px;
+  }
+}
+
+.menu-secondaire {
+  display: flex;
+  flex-direction: row;
+}
+.menu-secondaire .menu-secondaire__item {
+  padding: 0 20px 0 0;
+}
+.menu-secondaire .menu-secondaire__item .menu-secondaire__lien {
+  color: black;
+  font-weight: 500;
+}
+.menu-secondaire .menu-secondaire__item--active .menu-secondaire__lien {
+  color: #ff764d;
+}
+
+/* Main
+   ========================================================================== */
+/* Bandeau */
+.bandeau {
+  height: 850px;
+  background-image: url("https://ableton-production.imgix.net/about/header.jpg?fit=crop&auto=format&fm=jpg");
+  background-position: center;
+  background-size: auto 100%;
+  position: relative;
+}
+.bandeau .bandeau__titre {
+  font-size: 0;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(50%);
+}
+@media (min-width: 770px) {
+  .bandeau .bandeau__titre {
+    transform: translate(-50%, -50%) scale(100%);
+  }
+}
+
+/* Section Texte */
+.section_texte {
+  width: 100%;
+  margin: 0 auto;
+}
+@media (min-width: 770px) {
+  .section_texte {
+    width: 80%;
+  }
+}
+@media (min-width: 1275px) {
+  .section_texte {
+    width: 60%;
+  }
+}
+
+/* Section Image */
+.section_image {
+  width: 100%;
+  aspect-ratio: 10/7;
+  display: flex;
+  flex-direction: row;
+}
+.section_image div:nth-of-type(1) img {
+  width: 300px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+}
+.section_image div:nth-of-type(2) {
+  background-color: #fbffa7;
 }

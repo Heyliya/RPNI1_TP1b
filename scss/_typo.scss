@@ -38,7 +38,6 @@ body {
     font-size: 1.6rem;
     /* facteur multiplicateur de la taille de la police 1.375x16 = 22 */
     line-height: 1.5;
-
     @media (min-width: 1125px) {
         font-size: 2rem;
 
@@ -47,17 +46,17 @@ body {
 
 h2,
 .h2 {
-    font-size: 2rem;
-    line-height: 1.5;
-    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    font-weight: 500;
     @media (min-width: 1125px) {
-        font-size: 3rem;
-        line-height: 1.4;
+        font-size: 2.6rem;
+        line-height: 1.6;
     }
 }
 
 .menu__lien {
-    font-size: 2rem;
+    font-size: 1.8rem;
     @media (min-width:1025px) and (max-width:1275px) {
         font-size: 1.6rem;
     }
