@@ -7,3 +7,4 @@ https://www.ableton.com/en/about/
 # todo
 * Mettre le logo plus gros
 * Faire le menu fermer ou juste le bouton
+* Pourquoi position sticky marche pas sur le menu-secondaire
